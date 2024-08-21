@@ -8,6 +8,9 @@
     /*border: 1px solid red; para ver as divsões da página*/
 }
 
+& body {
+    background-color: white
+}
 
 #principal {
     width: 1120px;
@@ -22,14 +25,15 @@
         background-color: red;
         border-radius: 50%;
 
-    & #imgperfil/perfil{
-        display: block;
-        width: 150px;
-        height: 150px;
-        text-align: center;
-        border-radius: 50%;
+        & img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50%;
 
-    }
+        }
     }
 
 }
@@ -128,56 +132,126 @@
         & ul {
             display: flex;
             gap: 16px;
-            
+
 
             & li {
                 flex: 1;
                 height: 100px;
                 background-color: red;
-                
+
             }
         }
     }
+
     & #experiencias {
-        & h2{
+        & h2 {
             font-size: 48px;
         }
-        ul{
+
+        ul {
             display: flex;
             gap: 16px;
 
-            & li{
+            & li {
                 flex: 1;
                 padding: 12px;
                 border-radius: 10px;
 
-                & img{
+                & img {
                     width: 100%;
                     display: block;
                     aspect-ratio: 1;
                 }
-                & h5{
+
+                & h5 {
                     margin-top: 16px;
                     font-size: 20px;
                     color: #7CFFB0;
-                    & span{
+
+                    & span {
                         display: block;
                         font-size: 14px;
                         color: #FFFFFF;
                     }
                 }
-                & h6{
+
+                & h6 {
                     color: #FFFFFF;
                     margin-top: 6px;
                 }
 
                 background-color: red;
-
-
             }
         }
     }
-    & #projetos {
-      
+
+    & #projetos {}
+}
+
+/* tablet na horizontal */
+@media only screen and (max-width: 1024px) {
+    #principal {
+        width: 100%;
+        /* coloca 100% para a largura ficar de acordo com o max-width:1024 px*/
+        padding: 60px;
+        /*coloca padding para ficar distante da tela */
     }
 }
+
+/* tablet na vertical */
+@media only screen and (max-width: 768px) {
+    #principal {
+        flex-direction: column;
+        align-items: center;
+
+        & main {
+            & #topo {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 0;
+
+                & div {
+                    text-align: center;
+                }
+
+                & ul {
+                    justify-content: center;
+                    margin-bottom: 26px;
+                }
+            }
+                & #sobre{
+            & p{
+                width: 100%;
+            }
+                }
+        }
+    }
+}
+
+/* smartphones */
+@media only screen and (max-width: 600px) {
+    /*existe o @media print- ele serve para conseguir imprimir a tela.*/
+    #principal{
+    padding: 16px;  
+    & main{
+        & #topo{
+            & div{
+                & h1{
+                    font-size: 26px;
+                }
+            }
+        }
+        & #linguagens{
+            & ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                & li{
+                    flex: initial;
+                }
+            }
+        }
+        }
+    
+    }    
+    }
+    
