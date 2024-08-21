@@ -2,5 +2,6 @@
     "workbench.editor.autoLockGroups": {
         "imagePreview.previewEditor": true
     },
-    "terminal.integrated.defaultProfile.windows": "Git Bash"
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "liveServer.settings.port": 5501
 }

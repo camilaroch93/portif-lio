@@ -18,10 +18,20 @@
     & #foto {
         width: 150px;
         height: 150px;
+        text-align: center;
         background-color: red;
         border-radius: 50%;
-    
+
+    & #imgperfil/perfil{
+        display: block;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        border-radius: 50%;
+
     }
+    }
+
 }
 
 & main {
